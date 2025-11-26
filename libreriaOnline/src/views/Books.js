@@ -16,7 +16,7 @@ export default async function Books(){
         const returned = '<div class="div'+count+'"> <p>'+book.Name+'</p> </div>';
         count++;
         return returned;
-    })
+    }).join("")
     }
 
     </div>

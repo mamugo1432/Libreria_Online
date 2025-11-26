@@ -7,6 +7,7 @@ export function Header(){
         <ul>
             <li><a href="#/">Books</a></li>
             <li><a href="#/login">Login</a></li>
+            <li><a href="#/aboutMe">🧑🏽</a></li>
         </ul>
     </nav>
     </header>
