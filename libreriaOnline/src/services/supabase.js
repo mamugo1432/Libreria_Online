@@ -4,6 +4,6 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 
   export async function getAllBooks(){
-    const {data} =  await supabase.from("Book").select('*');
+    const {data} =  await supabase.from("Book").select('*, Gender(Name)');
       return data;
   }

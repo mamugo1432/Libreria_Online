@@ -12,5 +12,5 @@ export async  function router() {
       '/login':Login,
 };
     const screen = routes[route] || NotFound;
-    view.innerHTML = screen();
+    view.innerHTML =await screen();
 }
