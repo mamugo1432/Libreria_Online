@@ -4,6 +4,11 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 
   export async function getAllBooks(){
-    const {data} =  await supabase.from("Book").select('*, Gender(Name)');
+    const {data} =  await supabase.from("Book").select('img,Name,id, Gender(Name)');
       return data;
+  }
+
+  export async function getBookById(id){
+    const {data} = await supabase.from("Book").select('img,Name,id, Gender(Name)').eq('id',id);
+    return data;
   }
