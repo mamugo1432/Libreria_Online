@@ -9,6 +9,6 @@ const supabase = createClient(supabaseUrl, supabaseKey);
   }
 
   export async function getBookById(id){
-    const {data} = await supabase.from("Book").select('img,Name,id, Gender(Name)').eq('id',id);
+    const {data} = await supabase.from("Book").select('img,Name,id, Author, Gender(Name)').eq('id',id);
     return data;
   }
