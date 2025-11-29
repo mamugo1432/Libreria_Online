@@ -6,6 +6,10 @@ import Books from './views/Books'
 import './styles/Main.css'
 let result = `${Header()}<main id="view"></main>${Footer()}`;
 
+if(!localStorage.getItem("favorites")){
+    localStorage.setItem("favorites", "[]");
+}
+
 /*if(window.location.hash=="#/login"){
     result = `<header></header><main id="view"></main>${Footer()}`;}*/
 
