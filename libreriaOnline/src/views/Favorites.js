@@ -3,6 +3,10 @@ import '../styles/Favorites.css'
 export default async function Favorites(){
 
     let result =""; 
+    if(!localStorage.getItem("favorites")){
+    localStorage.setItem("favorites", "[]");
+}
+
     if(JSON.parse(localStorage.getItem("favorites")).length!=0){
         result='<div class="tab-pane fade show active" "role="tabpanel" aria-labelledby="kategori1-tab"><div class="row m-0 p-3">';
         const favorites = JSON.parse(localStorage.getItem("favorites"));
