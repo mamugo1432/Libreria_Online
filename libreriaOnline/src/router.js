@@ -3,6 +3,8 @@ import Books from './views/Books.js';
 import Login from './views/Login.js';
 import BookDetail from './views/BookDetail.js';
 import Favorites from './views/Favorites.js';
+import { showError, showSuccess, isRequired, checkUsername, checkPassword, debounce, evenForm } from './validator/validatorLogin.js'
+
 export async  function router() {
     const view = document.getElementById('view');
     const route = location.hash.slice(1).toLowerCase() || '/';
@@ -21,4 +23,8 @@ export async  function router() {
 
     const screen = routes[route] || NotFound;
     view.innerHTML =await screen();
+    if(window.location.hash=="#/login"){
+evenForm();
+}
+
 }

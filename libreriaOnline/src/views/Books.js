@@ -8,7 +8,7 @@ export default async function Books(){
 
 
     return `<div class="tab-pane fade show active" "role="tabpanel" aria-labelledby="kategori1-tab">
-            <div class="row g-4">
+            <div class="row m-0 p-3">
 
     ${
     books.map( book => {

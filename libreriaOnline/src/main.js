@@ -4,7 +4,6 @@ import { Header } from './components/Header'
 import { router } from './router'
 import Books from './views/Books'
 import './styles/Main.css'
-
 let result = `${Header()}<main id="view"></main>${Footer()}`;
 
 /*if(window.location.hash=="#/login"){
@@ -31,3 +30,5 @@ document.querySelector('#app').innerHTML = '<link href="https://cdn.jsdelivr.net
 
 router();
 window.addEventListener('hashchange', router);
+
+

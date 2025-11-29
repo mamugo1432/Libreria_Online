@@ -3,7 +3,7 @@ import '../styles/Login.css'
 export default function Login(){
     return `
     
-    <section class="vh-100">
+    <section id="form" class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -34,19 +34,5 @@ export default function Login(){
     </div>
   </div>
 </section>
-<script src="/src/validator/validatorLogin.js"></script>
-    
-    ` /*`
-
-    <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
-
-        <label for="password">Password</label>
-        <input type="text" name="password" id="password">
-
-        <button>Login</button>
-    
-        </div>
-    `*/;
+    `
 }

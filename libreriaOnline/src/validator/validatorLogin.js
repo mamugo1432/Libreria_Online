@@ -1,4 +1,4 @@
-const showError = (input, message) => {
+export const showError = (input, message) => {
   const formField = input.parentElement;
   formField.classList.remove('success');
   formField.classList.add('error');
@@ -6,7 +6,7 @@ const showError = (input, message) => {
   error.textContent = message;
 };
 
-const showSuccess = (input) => {
+export const showSuccess = (input) => {
   const formField = input.parentElement;
   formField.classList.remove('error');
   formField.classList.add('success');
@@ -14,14 +14,14 @@ const showSuccess = (input) => {
   error.textContent = '';
 };
 
-const isRequired = (text) =>{
+export const isRequired = (text) =>{
 return text.trim()!="";
 }
 
-const checkUsername = (inputUsername) =>{
+export const checkUsername = (inputUsername) =>{
 
     let valid = false;
-    if(!isRequired(inputUsername.textContent)){
+    if(!isRequired(inputUsername.value)){
         showError(inputUsername, "Username cannot be empty");
     }else{
         showSuccess(inputUsername);
@@ -30,10 +30,10 @@ const checkUsername = (inputUsername) =>{
     return valid;
 }
 
-const checkPassword = (inputPassword) =>{
+export const checkPassword = (inputPassword) =>{
 
     let valid = false;
-    if(!isRequired(inputPassword.textContent)){
+    if(!isRequired(inputPassword.value)){
         showError(inputPassword, "Password cannot be empty");
     }else{
         showSuccess(inputPassword);
@@ -42,7 +42,7 @@ const checkPassword = (inputPassword) =>{
     return valid;
 }
 
-const debounce = (fn, delay = 500) => {
+export const debounce = (fn, delay = 500) => {
   let timeoutId;
   return (...args) => {
     // Cancelar el temporizador anterior si existe
@@ -55,7 +55,8 @@ const debounce = (fn, delay = 500) => {
     }, delay);
   };
 };
-
+export const evenForm = () =>{
+   const form = document.getElementById('form');
 form.addEventListener('input', debounce(function (e) {
   switch (e.target.id) {
     case 'username':
@@ -65,3 +66,5 @@ form.addEventListener('input', debounce(function (e) {
       checkPassword(e.target);
       break;
   }}));
+  return;
+}
