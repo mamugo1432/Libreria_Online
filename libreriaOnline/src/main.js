@@ -24,6 +24,7 @@ let result = `${Header()}<main id="view"></main>${Footer()}`;
           if(localStorage.getItem("favorites")){
             let favorites = JSON.parse(localStorage.getItem("favorites"));
             favorites.push(parseInt(id));
+            favorites = Array.from(new Set(favorites));
             localStorage.setItem("favorites", JSON.stringify(favorites));
         }
     }
