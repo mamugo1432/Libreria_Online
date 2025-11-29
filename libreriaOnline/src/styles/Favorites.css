@@ -1,0 +1,13 @@
+
+        .noFavorites-container {
+            background: rgba(245, 172, 172, 0.826);
+            border-radius: 10px;
+            padding: 3rem;
+            margin: 143px 15px;
+            text-align: center;
+        }
+        .noFavorites-message {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color:red;
+        }

@@ -8,7 +8,12 @@ const supabase = createClient(supabaseUrl, supabaseKey);
       return data;
   }
 
-  export async function getBookById(id){
+  export async function getBookFavoriteById(id){
     const {data} = await supabase.from("Book").select('img,Name,id, Author, Gender(Name)').eq('id',id);
     return data;
+  }
+
+  export async function getDetailBook(id){
+    const {data} = await supabase.from("Book").select('*, Gender(Name)').eq('id', id);
+    return data[0];
   }

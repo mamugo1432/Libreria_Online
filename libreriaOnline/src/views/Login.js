@@ -15,15 +15,17 @@ export default function Login(){
             <div  class="form-outline mb-4">
             <label class="form-label" for="username">Username</label>
             <input type="text" id="username" class="form-control form-control-lg" />
+            <small></small>
             </div>
 
             <div  class="form-outline mb-4">
             <label class="form-label" for="password">Password</label>
             <input type="password" id="password" class="form-control form-control-lg" />
+            <small></small>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block">
-            <a href="/#/" style="color: inherit; text-decoration: none;">Login</a>
+            <a href="/#/" style="color: inherit; text-decoration: none;">Send</a>
             </button>
 
           </div>
@@ -32,6 +34,7 @@ export default function Login(){
     </div>
   </div>
 </section>
+<script src="/src/validator/validatorLogin.js"></script>
     
     ` /*`
 

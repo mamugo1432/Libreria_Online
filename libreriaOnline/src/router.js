@@ -15,7 +15,7 @@ export async  function router() {
 
     if(parts[1]=="books"){
         const id = parts[2];
-        view.innerHTML = BookDetail(id);
+        view.innerHTML =await BookDetail(id);
         return;
     }
 
